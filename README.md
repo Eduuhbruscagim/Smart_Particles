@@ -1,15 +1,3 @@
-# Smart Particles (Source Repository)
-
-This repository contains the source code for **Smart Particles**, a lightweight client-side optimization mod for Minecraft.
-
-**Mod Summary:** A performance mod that caps the total particle count to maintain stable FPS. Instead of blocking new particles randomly, it intelligently removes the particles farthest from the player to ensure the most important visual effects remain visible.
-
----
-
-## Repository Structure
-
----
-
 ## Mudanças do Fork (Edição Otimizada)
 
 Este fork aplica as seguintes otimizações de performance ao Smart Particles original:
