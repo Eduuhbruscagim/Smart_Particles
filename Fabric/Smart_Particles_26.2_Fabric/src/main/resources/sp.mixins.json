@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "sp.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "SPAccessor",
+    "ParticleManagerMixin",
+    "ParticleGroupAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
