@@ -1,3 +1,5 @@
+---
+
 ## Mudanças do Fork (Edição Otimizada)
 
 Este fork aplica as seguintes otimizações de performance ao Smart Particles original:
@@ -6,12 +8,12 @@ Este fork aplica as seguintes otimizações de performance ao Smart Particles or
 
 | Otimização | Antes | Depois | Impacto |
 |---|---|---|---|
-| **Pass de cleanup** | Segundo pass O(N) sobre todas as partículas | Eliminado — vanilla limpa partículas mortas automaticamente | ~40% menos CPU |
-| **Culling no caso comum** | Heap scoring O(n log n) todo tick | Frustum-only linear O(n) quando abaixo do limite | Mais rápido no gameplay normal |
-| **Cálculo de FOV** | `cos(toRadians(...))` todo tick | Cache — recalcula só quando FOV muda | Elimina trig por tick |
-| **Acesso a campos da câmera** | Dispatch virtual no inner loop | Variáveis locais finais | Loop mais otimizado |
-| **Memória do heap** | Arrays nunca encolhem | Encolhem quando limite é reduzido (fator 4x) | Menos desperdício de memória |
-| **Pressão no GC** | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas de GC |
+| Pass de cleanup | Segundo pass sobre todas as partículas | Eliminado - vanilla limpa partículas mortas automaticamente | Aprox. 40% menos CPU |
+| Culling no caso comum | Heap scoring a cada tick | Frustum-only linear quando abaixo do limite | Mais rápido no gameplay normal |
+| Cálculo de FOV | Recalculado com trigonometria todo tick | Cache - recalcula só quando FOV muda | Elimina trigonometria por tick |
+| Acesso a campos da câmera | Dispatch virtual no inner loop | Variáveis locais finais | Loop mais otimizado |
+| Memória do heap | Arrays nunca encolhem | Encolhem quando limite é reduzido | Menos desperdício de memória |
+| Pressão no GC | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas de GC |
 
 ### Compatibilidade
 
