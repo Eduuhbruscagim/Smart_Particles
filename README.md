@@ -30,5 +30,3 @@ Este fork está licenciado sob a **Licença MIT**, a mesma do projeto original. 
 - Usar este mod em qualquer modpack, pessoal ou público;
 - Ver, copiar e modificar o código-fonte livremente;
 - Distribuir versões compiladas, desde que o aviso de licença original seja mantido.
--View, fork, and modify the source code.
-- Distribute built versions (keeping the license intact).
