@@ -21,12 +21,16 @@ Totalmente compatível com Sodium, Iris, Lithium, FerriteCore, ModernFix e todos
 
 ---
 
-## License
+## Licença e Créditos
 
-### MIT License
+Este projeto é um fork do [Smart Particles](https://github.com/chedidandrew/Smart_Particles), criado originalmente por **chedidandrew**. Todo o crédito pelo conceito original e pela implementação base do mod é dele.
 
-You are free to:
+Este fork está licenciado sob a **Licença MIT**, a mesma do projeto original. Isso significa que você pode:
 
-* Use this mod in any modpack.
+- Usar este mod em qualquer modpack, pessoal ou público;
+- Ver, copiar e modificar o código-fonte livremente;
+- Distribuir versões compiladas, desde que o aviso de licença original seja mantido.
+
+
 * View, fork, and modify the source code.
 * Distribute built versions (keeping the license intact).
