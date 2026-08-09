@@ -1,5 +1,3 @@
----
-
 ## Mudanças do Fork (Edição Otimizada)
 
 Este fork aplica as seguintes otimizações de performance ao Smart Particles original:
@@ -20,7 +18,6 @@ Este fork aplica as seguintes otimizações de performance ao Smart Particles or
 Totalmente compatível com Sodium, Iris, Lithium, FerriteCore, ModernFix e todos os principais mods de otimização.
 
 **Não compatível com AsyncParticles** (conflito de acesso concorrente).
-
 ---
 
 ## Licença e Créditos
