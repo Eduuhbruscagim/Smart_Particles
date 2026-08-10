@@ -1,32 +1,32 @@
-## Mudanças do Fork (Edição Otimizada)
+## Fork Changes (Optimized Edition)
 
-Este fork aplica as seguintes otimizações de performance ao Smart Particles original:
+This fork applies the following performance optimizations to the original Smart Particles:
 
-### Melhorias de Performance
+### Performance Improvements
 
-| Otimização | Antes | Depois | Impacto |
+| Optimization | Before | After | Impact |
 |---|---|---|---|
-| Limpeza de partículas | Segundo passe completo sobre todas as partículas | Eliminado, o próprio Minecraft limpa partículas mortas automaticamente | Aproximadamente 40% menos uso de CPU |
-| Culling no caso comum | Classificação via heap a cada tick | Apenas culling de frustum linear quando abaixo do limite | Mais rápido durante gameplay normal |
-| Cálculo de campo de visão | Recalculado com trigonometria todo tick | Usa cache, recalcula só quando o campo de visão muda | Elimina cálculos desnecessários por tick |
-| Acesso a campos da câmera | Acesso virtual repetido no loop interno | Variáveis locais finais | Loop interno mais otimizado |
-| Memória do heap | Arrays nunca encolhem | Encolhem quando o limite de partículas é reduzido | Menos desperdício de memória |
-| Pressão no coletor de lixo | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas do coletor de lixo |
+| Particle cleanup | Full second pass over all particles | Eliminated, vanilla Minecraft handles dead particle removal automatically | Less CPU usage |
+| Common case culling | Heap scoring every tick | Linear frustum-only culling when under the particle limit | Faster during normal gameplay |
+| FOV calculation | Trigonometry recalculated every tick | Cached, only recalculates when FOV actually changes | Eliminates unnecessary math per tick |
+| Camera field access | Repeated virtual dispatch in inner loop | Final local variables | Tighter inner loop |
+| Heap memory | Arrays never shrink | Shrink when particle limit is reduced | Less memory waste |
+| GC pressure | Dead references retained in heap array | Cleared after each tick | Fewer garbage collector pauses |
 
-### Compatibilidade
+### Compatibility
 
-Totalmente compatível com Sodium, Iris, Lithium, FerriteCore, ModernFix e todos os principais mods de otimização.
+Fully compatible with Sodium, Iris, Lithium, FerriteCore, ModernFix and all major optimization mods.
 
-Não compatível com AsyncParticles devido a conflito de acesso concorrente.
+Not compatible with AsyncParticles due to concurrent access conflict on the particle Queue.
 
 ---
 
-## Licença e Créditos
+## License and Credits
 
-Este projeto é um fork do [Smart Particles](https://github.com/chedidandrew/Smart_Particles), criado originalmente por **chedidandrew**. Todo o crédito pelo conceito original e pela implementação base do mod é dele.
+This project is a fork of [Smart Particles](https://github.com/chedidandrew/Smart_Particles), originally created by **chedidandrew**. All credit for the original concept and base implementation of the mod goes to him.
 
-Este fork está licenciado sob a **Licença MIT**, a mesma do projeto original. Isso significa que você pode:
+This fork is licensed under the **MIT License**, the same as the original project. This means you can:
 
-- Usar este mod em qualquer modpack, pessoal ou público;
-- Ver, copiar e modificar o código-fonte livremente;
-- Distribuir versões compiladas, desde que o aviso de licença original seja mantido.
+- Use this mod in any modpack, personal or public;
+- View, copy and modify the source code freely;
+- Distribute compiled versions, as long as the original license notice is kept.
