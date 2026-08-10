@@ -6,9 +6,9 @@ Este fork aplica as seguintes otimizações de performance ao Smart Particles or
 
 | Otimização | Antes | Depois | Impacto |
 |---|---|---|---|
-| Limpeza de partículas | Segundo passe completo sobre todas as partículas | Eliminado - o próprio Minecraft limpa partículas mortas automaticamente | Aproximadamente 40% menos uso de CPU |
+| Limpeza de partículas | Segundo passe completo sobre todas as partículas | Eliminado, o próprio Minecraft limpa partículas mortas automaticamente | Aproximadamente 40% menos uso de CPU |
 | Culling no caso comum | Classificação via heap a cada tick | Apenas culling de frustum linear quando abaixo do limite | Mais rápido durante gameplay normal |
-| Cálculo de campo de visão | Recalculado com trigonometria todo tick | Usa cache - recalcula só quando o campo de visão muda | Elimina cálculos desnecessários por tick |
+| Cálculo de campo de visão | Recalculado com trigonometria todo tick | Usa cache, recalcula só quando o campo de visão muda | Elimina cálculos desnecessários por tick |
 | Acesso a campos da câmera | Acesso virtual repetido no loop interno | Variáveis locais finais | Loop interno mais otimizado |
 | Memória do heap | Arrays nunca encolhem | Encolhem quando o limite de partículas é reduzido | Menos desperdício de memória |
 | Pressão no coletor de lixo | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas do coletor de lixo |
