@@ -6,18 +6,18 @@ Este fork aplica as seguintes otimizações de performance ao Smart Particles or
 
 | Otimização | Antes | Depois | Impacto |
 |---|---|---|---|
-| Pass de cleanup | Segundo pass sobre todas as partículas | Eliminado - vanilla limpa partículas mortas automaticamente | Aprox. 40% menos CPU |
-| Culling no caso comum | Heap scoring a cada tick | Frustum-only linear quando abaixo do limite | Mais rápido no gameplay normal |
-| Cálculo de FOV | Recalculado com trigonometria todo tick | Cache - recalcula só quando FOV muda | Elimina trigonometria por tick |
-| Acesso a campos da câmera | Dispatch virtual no inner loop | Variáveis locais finais | Loop mais otimizado |
-| Memória do heap | Arrays nunca encolhem | Encolhem quando limite é reduzido | Menos desperdício de memória |
-| Pressão no GC | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas de GC |
+| Limpeza de partículas | Segundo passe completo sobre todas as partículas | Eliminado - o próprio Minecraft limpa partículas mortas automaticamente | Aproximadamente 40% menos uso de CPU |
+| Culling no caso comum | Classificação via heap a cada tick | Apenas culling de frustum linear quando abaixo do limite | Mais rápido durante gameplay normal |
+| Cálculo de campo de visão | Recalculado com trigonometria todo tick | Usa cache - recalcula só quando o campo de visão muda | Elimina cálculos desnecessários por tick |
+| Acesso a campos da câmera | Acesso virtual repetido no loop interno | Variáveis locais finais | Loop interno mais otimizado |
+| Memória do heap | Arrays nunca encolhem | Encolhem quando o limite de partículas é reduzido | Menos desperdício de memória |
+| Pressão no coletor de lixo | Referências mortas retidas no array do heap | Limpas após cada tick | Menos pausas do coletor de lixo |
 
 ### Compatibilidade
 
 Totalmente compatível com Sodium, Iris, Lithium, FerriteCore, ModernFix e todos os principais mods de otimização.
 
-**Não compatível com AsyncParticles** (conflito de acesso concorrente).
+Não compatível com AsyncParticles devido a conflito de acesso concorrente.
 
 ---
 
